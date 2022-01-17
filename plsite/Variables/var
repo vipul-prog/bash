@@ -6,3 +6,57 @@ Pass parameters to the script
 - Naming A variable
 - quoting
 
+
+-----------------------------
+
+Quote your Variables
+Use "$x" instead of $x
+No Surprise when input contains spaces
+Use double quotes
+- keep meaning of dollar sign intact
+Not necessary in zsh
+- Zsh does not split variables in words
+- Behaviour is configurable
+
+------------------------------
+
+Braces
+Where does your variable name end?
+echo "${foo}bar"
+- prints value of var foo
+- followed by string "bar"
+
+echo "$foobar"
+- prints value of foobar
+
+-------------------------------
+
+Taking Arguments
+Script can accept input from arguments
+Inside the script, the arguments are available as a special numbered variables
+
+
+-------------------------------
+End of Options
+Use -- (end of options)
+if you need to print data use printf
+
+
+-------------------------------
+Debugging
+#!bin/bash -x
+or
+#!/usr/bin/env bash
+set -x
+
+--------------------------------
+Use shellcheck for checking 
+
+--------------------------------
+Export
+Variables are local to your script
+- or terminal Session
+Export a variable
+- to make it available to subprocesses
+- export var
+- export var="value"
